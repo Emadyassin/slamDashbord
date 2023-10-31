@@ -17,10 +17,12 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import Cards from "./Cards";
+import Card2 from "./Card2";
 import { Grid } from "@mui/material";
 import LoansChart from "./LoansChart";
 import Installment from "./Installment";
 import PaidInst from "./PaidInst";
+import DashedLineChart from "./TotalAmount";
 
 const drawerWidth = 240;
 
@@ -231,7 +233,7 @@ export default function MiniDrawer() {
               </Box>
             </Grid>
             <Grid container spacing={3} item={true} xs={12} md={3}>
-              <Grid  item={true} xs={12} md={12}>
+              <Grid item={true} xs={12} md={12}>
                 <Box height borderRadius={5} width boxShadow={3} padding={2} paddingBottom={0}>
                   <Typography variant="body1" component="h3" gutterBottom>
                     Installment Paid
@@ -252,7 +254,27 @@ export default function MiniDrawer() {
             </Grid>
           </Grid>
         </Box>
+        <Box sx={{ flexGrow: 1, marginTop: "20px" }}>
+          <Grid container spacing={3}>
+            <Grid item={true} xs={12} md={3}>
+              <Card2 />
+            </Grid>
+            <Grid item={true} xs={12} md={9}>
+              <Box height borderRadius={5} width boxShadow={3} padding={2} paddingBottom={0}>
+                <Typography variant="body1" component="h3" gutterBottom>
+                  Total Amounts
+                </Typography>
+                <Divider color="white" />
+                <DashedLineChart />
+              </Box>
+            </Grid>
+          </Grid>
+
+
+
+
+        </Box>
       </Box>
-    </Box>
+    </Box >
   );
 }

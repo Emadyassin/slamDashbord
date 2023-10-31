@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import MiniDrawer from './assets/components/Sidebar'
+import DashedLineChart from './assets/components/TotalAmount'
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
   return (
     <>
       <MiniDrawer />
+      
+
     </>
   )
 }
